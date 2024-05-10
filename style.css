@@ -2,6 +2,7 @@
 
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
@@ -27,17 +28,29 @@ body {
     width: 100%;
     height: 15vh;
     /* background-color: #f6f6ee; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0 4vw;
 
 }
 
+#links i {
+    display: none;
+}
+
 #nav #links {
 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    gap: 50px;
+    gap: 3.5vw;
 
 }
 
@@ -45,8 +58,12 @@ body {
 
     text-decoration: none;
     font-weight: 900;
-    font-size: 13px;
+    font-size: 0.9vw;
 
+}
+
+#links a:hover {
+    text-decoration: underline;
 }
 
 #nav h2 {
@@ -67,16 +84,25 @@ body {
     width: 100%;
     height: 40vh;
     /* background-color: #f6f6ee; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
 }
 
 #heading h1 {
 
-    font-size: 40px;
+    font-size: 2.8vw;
 
 }
 
@@ -84,18 +110,17 @@ body {
 
     width: 50%;
     text-align: center;
-    margin: 20px 0px;
+    margin: 1.5vw 0;
 
 }
 
 #heading button {
 
-    padding: 12px 32px;
+    padding: 1vw 2vw;
     background-color: #fff;
-    border-radius: 100px;
+    border-radius: 5vw;
 
 }
-
 
 #illus {
 
@@ -113,10 +138,13 @@ body {
 
     width: 100%;
     margin-top: 4vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 10vw 5vw;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-
 
 }
 
@@ -124,9 +152,16 @@ body {
 
     width: 48%;
     border-right: solid 2px #000;
-    padding-right: 50px;
+    padding-right: 3vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
 
 }
@@ -134,9 +169,9 @@ body {
 #details #d-left #s-line {
 
     width: 5%;
-    height: 2px;
+    height: 1.5px;
     background-color: #000;
-    margin: 20px 0;
+    margin: 1vw 0;
 
 }
 
@@ -144,7 +179,7 @@ body {
 
     width: 40%;
     text-align: right;
-    font-size: 12px;
+    font-size: 0.8vw;
 
 }
 
@@ -154,36 +189,116 @@ body {
 
 }
 
-#d-right .features {
-
-    /* display: flex; */
-
-}
-
 .features p {
 
-    margin-top: 10px;
-    font-size: 12px;
+    margin-top: 1vw;
+    font-size: 0.8vw;
     width: 35%;
 
 }
 
 #d-right .features img {
 
-    height: 60px;
-    width: 60px;
+    height: 4vw;
+    width: 4vw;
 
 }
 
 .features .feat-prt {
 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 2.5vw;
 
 }
 
 .features .f-details {
 
-    margin-left: 35px;
+    margin-left: 2vw;
+
+}
+
+@media (max-width:800px) {
+
+    #nav a {
+        font-size: 1.5vw;
+    }
+
+    #links a:hover {
+        text-decoration: none;
+    }
+
+    #heading p {
+        margin: 3vw 0;
+    }
+
+    #heading button {
+        padding: 1.5vw 2.5vw;
+    }
+
+    #details #d-left #s-line {
+        width: 8%;
+        margin: 2vw 0;
+    }
+
+    #details #d-left p {
+        width: 70%;
+        font-size: 1.5vw;
+    }
+
+    .features p {
+        margin-top: 2vw;
+        font-size: 1.5vw;
+        width: 60%;
+    }
+
+}
+
+@media (max-width:600px) {
+
+    #links a {
+        display: none;
+    }
+
+    #links a:hover {
+        text-decoration: none;
+    }
+
+    #links i {
+        display: block;
+    }
+
+    #heading h1 {
+        font-size: 6vw;
+    }
+
+    #heading p {
+        margin: 5vw 0;
+        width: 75%;
+    }
+
+    #heading button {
+        padding: 2vw 3vw;
+    }
+
+    #details #d-left #s-line {
+        width: 8%;
+        margin: 2vw 0;
+    }
+
+    #d-left h1 {
+        padding-left: 10vw;
+    }
+
+    #details #d-left p {
+        width: 100%;
+        font-size: 2.2vw;
+    }
+
+    .features p {
+        font-size: 2.2vw;
+        width: 90%;
+    }
 
 }
